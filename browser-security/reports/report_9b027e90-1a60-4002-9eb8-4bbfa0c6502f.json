@@ -1,0 +1,21 @@
+{
+    "Title": "Browser Threat Alert: High Severity Event",
+    "Verdict": "MALICIOUS",
+    "Confidence": "0.85",
+    "Novelty": "Close Variant (Similarity: 0.89)",
+    "Triage_Action": "Logged for Monitoring",
+    "Executive_Summary": "A user navigated to file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_remote_browser.html. The system detected an overall severity of High.",
+    "Key_Indicators": [
+        "Large canvas element (>80% viewport) detected with minimal DOM nodes. Possible noVNC/Kasm remote browser stream.",
+        "The Visual Analysis indicates the presence of Microsoft Office 365 branding and logos, which suggests an attempt to impersonate a legitimate Microsoft service.",
+        "The Final URL is a local file path, which is inconsistent with a legitimate Microsoft Office 365 service, indicating a potential phishing attempt.",
+        "The presence of a credential harvesting login form in the visuals further supports the likelihood of a phishing attack.",
+        "The use of a local file path for a supposed Microsoft service is a strong indicator of a Browser-in-the-Browser (BitB) attack, where the attacker simulates a legitimate browser window to deceive users."
+    ],
+    "Extracted_IOCs": {
+        "URLs": [
+            "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_remote_browser.html"
+        ]
+    },
+    "Recommended_Mitigation": "Do not enter any credentials or personal information. Verify the authenticity of the website by checking the URL and ensure it is a legitimate Microsoft domain. Report the incident to your IT security team for further investigation."
+}

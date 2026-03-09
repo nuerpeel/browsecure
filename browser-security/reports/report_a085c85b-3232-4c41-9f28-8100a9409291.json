@@ -1,0 +1,20 @@
+{
+    "Title": "Browser Threat Alert: High Severity Event",
+    "Verdict": "MALICIOUS",
+    "Confidence": "0.90",
+    "Novelty": "Genuinely Novel (Similarity: 0.62)",
+    "Triage_Action": "Promoted to Analyst Review (Novel Threat)",
+    "Executive_Summary": "A user navigated to file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/019cc5ce-46d3-7768-8ee7-5df68b205257-dom.html. The system detected an overall severity of High.",
+    "Key_Indicators": [
+        "The Visual Analysis indicates a credential harvesting login form, which is a common phishing tactic.",
+        "The Final URL is a local file path, which is unusual for legitimate web services and suggests a potential Browser-in-the-Browser (BitB) attack.",
+        "The content of the page is unrelated to the Visual Analysis, as it discusses a project about Shakespearean text analysis, which contradicts the presence of a login form.",
+        "The presence of a login form on a page that is supposed to be about Shakespeare Analytics is suspicious and indicative of a phishing attempt."
+    ],
+    "Extracted_IOCs": {
+        "URLs": [
+            "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/019cc5ce-46d3-7768-8ee7-5df68b205257-dom.html"
+        ]
+    },
+    "Recommended_Mitigation": "Do not enter any credentials on this page. Verify the legitimacy of the website by checking the URL and ensure it matches the expected domain. Use security software to scan for potential threats and consider reporting the page to your IT department or security team."
+}

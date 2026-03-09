@@ -1,0 +1,20 @@
+{
+    "Title": "Browser Threat Alert: High Severity Event",
+    "Verdict": "MALICIOUS",
+    "Confidence": "0.90",
+    "Novelty": "Genuinely Novel (Similarity: 0.84)",
+    "Triage_Action": "Promoted to Analyst Review (Novel Threat)",
+    "Executive_Summary": "A user navigated to file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_benign.html. The system detected an overall severity of High.",
+    "Key_Indicators": [
+        "The visual analysis indicates the presence of ACME Corp branding, which matches the content of the page.",
+        "The page contains a credential harvesting login form, which is a common tactic used in phishing attacks.",
+        "The URL is a local file path, which is unusual for legitimate login pages and suggests a potential phishing attempt.",
+        "There is no contradiction between the visual analysis and the final URL, but the context of a local file path raises suspicion."
+    ],
+    "Extracted_IOCs": {
+        "URLs": [
+            "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_benign.html"
+        ]
+    },
+    "Recommended_Mitigation": "Do not enter any credentials on this page. Verify the legitimacy of the login page by checking the URL and ensuring it is hosted on a trusted domain. Report this page to your IT security team for further analysis."
+}

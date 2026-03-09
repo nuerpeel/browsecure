@@ -1,0 +1,5 @@
+playwright>=1.41.0
+pydantic>=2.5.3
+beautifulsoup4>=4.12.3
+chromadb>=0.4.22
+openai>=1.12.0

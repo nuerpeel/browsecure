@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Download</title>
+</head>
+<body>
+    <h2>View Candidate Profile</h2>
+    
+    <!-- OWASP: document.write sink -->
+    <script>
+        document.write("<img src=x onerror='console.log(\"document.write XSS\");'>");
+    </script>
+
+    <!-- OWASP: new Function sink -->
+    <script>
+        let payload = "console.log('new Function XSS');";
+        let badFunc = new Function(payload);
+        badFunc();
+    </script>
+    
+    <!-- OWASP: Dangerous setAttribute via JS URL -->
+    <a href="#" id="malicious-link">Click here to download resume</a>
+    <script>
+        document.getElementById('malicious-link').setAttribute('href', 'javascript:alert("XSS")');
+        document.getElementById('malicious-link').setAttribute('onmouseover', 'alert("XSS")');
+    </script>
+
+    <!-- OWASP: srcdoc via JS -->
+    <iframe id="target-frame"></iframe>
+    <script>
+        document.getElementById('target-frame').srcdoc = "<html><body><p>srcdoc XSS</p></body></html>";
+    </script>
+
+    <button>Verify</button>
+</body>
+</html>

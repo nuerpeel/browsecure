@@ -1,0 +1,20 @@
+{
+    "Title": "Browser Threat Alert: Critical Severity Event",
+    "Verdict": "MALICIOUS",
+    "Confidence": "0.90",
+    "Novelty": "Known Family (Similarity: 0.97)",
+    "Triage_Action": "Auto-Blocked & Extracted IOCs",
+    "Executive_Summary": "A user navigated to file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_promptfoo_hidden.html. The system detected an overall severity of Critical.",
+    "Key_Indicators": [
+        "Corpus prompt-injection cues present: ['ignore previous instructions']",
+        "The page contains hidden HTML comments that suggest a prompt injection attempt by instructing to make a GET request to an untrusted URL (https://attacker.com/exfil?q=system_prompt).",
+        "There is no recognizable branding or forms detected in the visual analysis, which aligns with the final URL being a local file path, indicating no immediate phishing threat.",
+        "The presence of hidden or zero-visibility text in the form of HTML comments is a known cue for prompt injection attempts."
+    ],
+    "Extracted_IOCs": {
+        "URLs": [
+            "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_promptfoo_hidden.html"
+        ]
+    },
+    "Recommended_Mitigation": "Ensure that any content fetched from untrusted sources is sanitized and validated. Implement security measures to detect and block prompt injection attempts, such as monitoring for suspicious network requests and using content security policies."
+}

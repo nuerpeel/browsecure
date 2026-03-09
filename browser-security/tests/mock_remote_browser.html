@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Workspace</title>
+    <style>
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <!-- Simulate a Remote Browser (noVNC/Kasm) attack -->
+    <canvas id="stream-canvas"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('stream-canvas');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const ctx = canvas.getContext('2d');
+        
+        // Draw a fake "Microsoft Login" using canvas primitives (evades DOM parsers)
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        ctx.fillStyle = "#f4f4f4";
+        ctx.fillRect(canvas.width/2 - 200, canvas.height/2 - 200, 400, 400);
+        
+        ctx.fillStyle = "black";
+        ctx.font = "24px Arial";
+        ctx.fillText("Sign In to Microsoft", canvas.width/2 - 100, canvas.height/2 - 100);
+        
+        // Prevent default native context menus (another red flag of streaming)
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        
+        // Send a continuous stream of simulated binary blob "websocket" data 
+        // to mimic remote screen buffering
+        setInterval(() => {
+            console.log("WebSocket Frame Received");
+        }, 30); // ~30 fps
+    </script>
+</body>
+</html>

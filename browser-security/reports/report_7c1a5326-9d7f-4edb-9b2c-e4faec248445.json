@@ -1,0 +1,22 @@
+{
+    "Title": "Browser Threat Alert: High Severity Event",
+    "Verdict": "MALICIOUS",
+    "Confidence": "0.85",
+    "Novelty": "Close Variant (Similarity: 0.91)",
+    "Triage_Action": "Logged for Monitoring",
+    "Executive_Summary": "A user navigated to file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_owasp_sinks.html. The system detected an overall severity of High.",
+    "Key_Indicators": [
+        "Found 5 execution(s) of dangerous sinks. Examples: ['new_Function', 'document.write', 'iframe.srcdoc']",
+        "Corpus-matched sinks observed: ['srcdoc']",
+        "The page contains multiple OWASP security risks, including the use of 'document.write', 'new Function', and 'setAttribute' with a JavaScript URL, which are known vectors for XSS attacks.",
+        "The presence of an iframe with 'srcdoc' attribute is a potential XSS vector.",
+        "The 'Final URL' is a local file path, which does not match any external branding or claims, reducing the likelihood of phishing but indicating a potential local security test or attack simulation.",
+        "No recognizable branding or forms were detected, which reduces the risk of phishing but does not eliminate the risk of other types of attacks."
+    ],
+    "Extracted_IOCs": {
+        "URLs": [
+            "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_owasp_sinks.html"
+        ]
+    },
+    "Recommended_Mitigation": "Ensure that all JavaScript code is sanitized and validated. Avoid using 'document.write', 'new Function', and JavaScript URLs. Implement Content Security Policy (CSP) to mitigate XSS risks. Regularly audit and test the application for security vulnerabilities."
+}

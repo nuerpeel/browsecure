@@ -1,0 +1,104 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Shakespeare Analytics | shakespeare_analytics</title>
+<meta name="generator" content="Jekyll v3.10.0">
+<meta property="og:title" content="Shakespeare Analytics">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="A Python pipeline for parsing, NLP analysis, and character relations data extraction from Shakespearean texts.">
+<meta property="og:description" content="A Python pipeline for parsing, NLP analysis, and character relations data extraction from Shakespearean texts.">
+<link rel="canonical" href="https://wmjg-alt.github.io/shakespeare_analytics/">
+<meta property="og:url" content="https://wmjg-alt.github.io/shakespeare_analytics/">
+<meta property="og:site_name" content="shakespeare_analytics">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Shakespeare Analytics">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"A Python pipeline for parsing, NLP analysis, and character relations data extraction from Shakespearean texts.","headline":"Shakespeare Analytics","name":"shakespeare_analytics","url":"https://wmjg-alt.github.io/shakespeare_analytics/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <style class="anchorjs"></style><link rel="stylesheet" href="/shakespeare_analytics/assets/css/style.css?v=3f3a4836803744d1b67b3a70bc6c66a9477250fd">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/shakespeare_analytics/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head><body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://wmjg-alt.github.io/shakespeare_analytics/">shakespeare_analytics</a></h1>
+      
+
+      <h1 id="shakespeare-analytics">Shakespeare Analytics</h1>
+
+<p>A Python-based pipeline for parsing, structuring, and analyzing raw text files of Shakespearean plays.</p>
+
+<p>This project reads raw plaintext plays and converts them into a deeply nested Object-Oriented schema (Play -&gt; Act -&gt; Scene -&gt; Turn). Once structured, it runs Transformer-based Named Entity Recognition (NER) via spaCy to map out character networks, calculating who speaks the most, how wordy they are, and who talks about whom.</p>
+
+<h2 id="current-features">Current Features<a class="anchorjs-link " href="#current-features" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<ul>
+  <li><strong>Custom Text Parser</strong>: Uses heuristics to safely extract character turns, stage directions, and narrative choruses, while discarding formatting noise.</li>
+  <li><strong>Metadata Injection</strong>: Calculates fractional progress through a scene/act/play for every spoken line.</li>
+  <li><strong>NLP Character Extraction</strong>: Identifies mentioned characters dynamically, filtering out historical text hallucinations (e.g., “dost”, “hath”, “ho”).</li>
+  <li><strong>Relational Mapping</strong>: Generates a many-to-many relationship dictionary of character mentions.</li>
+  <li><strong>Data Caching</strong>: Bypasses heavy NLP processing on subsequent runs by saving and loading states directly from CSV.</li>
+</ul>
+
+<h2 id="future-roadmap">Future Roadmap<a class="anchorjs-link " href="#future-roadmap" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<p>We plan to expand this pipeline to support:</p>
+<ul>
+  <li><strong>Multi-Play Comparisons</strong>: Analyzing word counts and character dynamics across multiple works.</li>
+  <li><strong>Data Visualization</strong>: Generating node-graphs of character relationships and timeline plots of scene densities.</li>
+  <li><strong>Media Syncing</strong>: Parsing film subtitle files (SRT) to map the text schema to exact movie timestamps.</li>
+</ul>
+
+<h2 id="setup--installation">Setup &amp; Installation<a class="anchorjs-link " href="#setup--installation" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+
+<ol>
+  <li>Create a conda environment and install dependencies:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create <span class="nt">-n</span> shakespeare_env <span class="nv">python</span><span class="o">=</span>3.10 <span class="nt">-y</span>
+conda activate shakespeare_env
+pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+</code></pre></div>    </div>
+  </li>
+  <li>Download the spaCy Transformer model:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> spacy download en_core_web_trf
+</code></pre></div>    </div>
+  </li>
+  <li>Place your raw play text (e.g., <code class="language-plaintext highlighter-rouge">Romeo_and_Juliet-Shakespeare-raw.txt</code>) into <code class="language-plaintext highlighter-rouge">data/raw/</code>.</li>
+</ol>
+
+<h2 id="usage">Usage<a class="anchorjs-link " href="#usage" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<p>Run the main orchestrator to parse the text, run the NLP, and generate the reports:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python main.py
+</code></pre></div></div>
+
+<p><strong>Flags:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-r</code> or <code class="language-plaintext highlighter-rouge">--rebuild</code>: Forces a complete re-parse of the raw text and a fresh NLP pass.</li>
+  <li><code class="language-plaintext highlighter-rouge">-t</code> or <code class="language-plaintext highlighter-rouge">--top[INT]</code>: Adjusts the number of top characters displayed in the terminal report (default is 5).</li>
+</ul>
+
+<p>Example: <code class="language-plaintext highlighter-rouge">python main.py -r -t 10</code></p>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/wmjg-alt/shakespeare_analytics/edit/main/README.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  
+
+</body>

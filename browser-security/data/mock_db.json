@@ -1,0 +1,86 @@
+{
+    "df4c4434-3ba7-44ef-a885-3ce9f470aade": {
+        "text": "url: file:///users/akashsingh/downloads/docs/git/browser-security/tests/mock_attack_page.html tags: #document #document html head head title head head style head html html body body body body div body body h2 body body p body body button body body body body div div div div div div div h3 div div div div div div div div div div button div div script div div body body script body sinks: eval eval eval",
+        "metadata": {
+            "url": "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_attack_page.html"
+        }
+    },
+    "9af02f5a-c0aa-42ad-aa50-f8964aebcc3d": {
+        "text": "url: file:///users/akashsingh/downloads/docs/git/browser-security/tests/mock_attack_page.html tags: #document #document html head head title head head style head html html body body body body div body body h2 body body p body body button body body body body div div div div div div div h3 div div div div div div div div div div button div div script div div body body script body sinks: eval eval eval",
+        "metadata": {
+            "url": "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_attack_page.html"
+        }
+    },
+    "507e21ee-dd33-45e7-b3f0-0ee0fcae4735": {
+        "text": "url: file:///users/akashsingh/downloads/docs/git/browser-security/tests/mock_attack_page.html tags: #document #document html head head title head head style head html html body body body body div body body h2 body body p body body button body body body body div div div div div div div h3 div div div div div div div div div div button div div script div div body body script body sinks: eval eval eval eval",
+        "metadata": {
+            "url": "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_attack_page.html"
+        }
+    },
+    "f47a7d56-979a-429a-a381-23a56cef1b53": {
+        "text": "url: file:///users/akashsingh/downloads/docs/git/browser-security/tests/mock_attack_page.html tags: #document #document html head head title head head style head html html body body body body div body body h2 body body p body body button body body body body div div div div div div div h3 div div div div div div div div div div button div div script div div body body script body sinks: eval",
+        "metadata": {
+            "url": "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_attack_page.html"
+        }
+    },
+    "df543a21-f998-4b1e-a601-fdeeb38b4873": {
+        "text": "url: file:///users/akashsingh/downloads/docs/git/browser-security/tests/mock_attack_page.html tags: #document #document html head head title head head style head html html body body body body div body body h2 body body p body body button body body body body div div div div div div div h3 div div div div div div div div div div button div div script div div body body script body sinks: eval",
+        "metadata": {
+            "url": "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_attack_page.html"
+        }
+    },
+    "16e96eba-9017-4e2f-abcd-aa7f96a6b76e": {
+        "text": "url: file:///users/akashsingh/downloads/docs/git/browser-security/tests/mock_benign.html tags: #document #document html head head title head head style head html html body body div div div div div p div div form form form form form form button form div div div div body body script body sinks: ",
+        "metadata": {
+            "url": "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_benign.html"
+        }
+    },
+    "4a1de042-796b-477a-ae38-c4ebbea3ead1": {
+        "text": "url: file:///users/akashsingh/downloads/docs/git/browser-security/tests/mock_delayed_dom_xss.html tags: #document #document html head head title head head style head html html body body h1 body body p body body button body body div div div body body body body div body body script body div sinks: innerhtml eval",
+        "metadata": {
+            "url": "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_delayed_dom_xss.html"
+        }
+    },
+    "7c1a5326-9d7f-4edb-9b2c-e4faec248445": {
+        "text": "url: file:///users/akashsingh/downloads/docs/git/browser-security/tests/mock_owasp_sinks.html tags: #document #document html head head title head html html body body h2 body body body body script body body body body body script body body body body a body body script body body body body body body script body body button body sinks: document.write new_function setattribute(href) setattribute(onmouseover) iframe.srcdoc",
+        "metadata": {
+            "url": "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_owasp_sinks.html"
+        }
+    },
+    "fa9948dd-332c-426c-95f4-3821ed98c2cc": {
+        "text": "url: file:///users/akashsingh/downloads/docs/git/browser-security/tests/mock_promptfoo_hidden.html tags: #document #document html head head title head html html body body h2 body body p body body body body body body body body body body button body sinks: ",
+        "metadata": {
+            "url": "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_promptfoo_hidden.html"
+        }
+    },
+    "9b027e90-1a60-4002-9eb8-4bbfa0c6502f": {
+        "text": "url: file:///users/akashsingh/downloads/docs/git/browser-security/tests/mock_remote_browser.html tags: #document #document html head head title head head style head html html body body body body body body script body sinks: ",
+        "metadata": {
+            "url": "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_remote_browser.html"
+        }
+    },
+    "b657c9ad-7865-4701-b8c0-e51042ca12af": {
+        "text": "url: file:///users/akashsingh/downloads/docs/git/browser-security/tests/mock_attack_page.html tags: #document #document html head head title head head style head html html body body body body div body body h2 body body p body body button body body body body div div div div div div div h3 div div div div div div div div div div button div div script div div body body script body sinks: eval",
+        "metadata": {
+            "url": "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_attack_page.html"
+        }
+    },
+    "0c38752f-f4fd-493d-b0db-823c5becd931": {
+        "text": "url: file:///users/akashsingh/downloads/docs/git/browser-security/tests/mock_attack_page.html tags: #document #document html head head title head head style head html html body body body body div body body h2 body body p body body button body body body body div div div div div div div h3 div div div div div div div div div div button div div script div div body body script body sinks: eval",
+        "metadata": {
+            "url": "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_attack_page.html"
+        }
+    },
+    "a085c85b-3232-4c41-9f28-8100a9409291": {
+        "text": "url: file:///users/akashsingh/downloads/docs/git/browser-security/tests/019cc5ce-46d3-7768-8ee7-5df68b205257-dom.html tags: #document html head head head head head head head head head head title head head head head head head head head head head head head head head head head head head head head head head head head script head head head head head head head head head head head head head head head head html body body div div h1 a div div h1 div div p div div p div div h2 h2 div div ul ul li strong li ul ul li strong li ul ul li strong li ul ul li strong li ul ul li strong li ul div div h2 h2 div div p div div ul ul li strong li ul ul li strong li ul ul li strong li ul div div h2 h2 div div ol ol li li div div pre code code span code code span code span code code span code code span code code span code div li ol ol li li div div pre code code span code div li ol ol li li code li li code li ol div div h2 h2 div div p div div div div pre code div div p strong div div ul ul li code li li code li ul ul li code li li code li ul div div p p code div div div div a div div body body body body script body sinks: ",
+        "metadata": {
+            "url": "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/019cc5ce-46d3-7768-8ee7-5df68b205257-dom.html"
+        }
+    },
+    "f20e1456-ca39-4bf4-9995-a79199564d5e": {
+        "text": "url: file:///users/akashsingh/downloads/docs/git/browser-security/tests/mock_attack_page.html tags: #document #document html head head title head head style head html html body body body body div body body h2 body body p body body button body body body body div div div div div div div h3 div div div div div div div div div div button div div script div div body body script body sinks: eval",
+        "metadata": {
+            "url": "file:///Users/akashsingh/Downloads/docs/git/browser-security/tests/mock_attack_page.html"
+        }
+    }
+}
